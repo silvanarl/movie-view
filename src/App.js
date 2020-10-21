@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Movies
+        Movies, peliculas
       </header>
     </div>
   );
