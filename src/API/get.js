@@ -1,11 +1,7 @@
 import {
-  API_URL,
-  API_KEY,
-  IMAGE_BASE_URL,
   SEARCH_BASE_URL,
   POPULAR_BASE_URL,
-  BACKDROP_SIZE,
-  POSTER_SIZE,
+  // ALL_BASE_URL,
 } from "../config";
 
 export const getPopularMovies = async () => {
@@ -13,3 +9,7 @@ export const getPopularMovies = async () => {
     return await response.json()
 };
 
+// export const getAllMovies = async () => {
+//   const response = await fetch(ALL_BASE_URL)
+//   return await response.json()
+// };
