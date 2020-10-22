@@ -1,0 +1,8 @@
+@import 'variables';
+@import 'mixin';
+
+.container-actors{
+    @include flexDirection(flex, row);
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
