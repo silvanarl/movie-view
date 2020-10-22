@@ -1,22 +1,23 @@
 import React,  { useState, useEffect } from 'react';
-import Movie from './Movie';
-import { 
-    getPopularMovies,
-} from '../API/get';
+import Movies from '../components/Movies';
+import Carousel from '../components/Carousel';
 
-const Home = () => {
-    const [popMovie, setPopMovie] = useState([]);
-    useEffect(() => {
-        getPopularMovies().then((obj) => {
-            console.log(obj.results);
-            if(obj.results) setPopMovie(obj.results)
-        });
-    }, []);
-    console.log(popMovie)
+const Home = ({popMovie}) => {
+    // const [popMovie, setPopMovie] = useState([]);
+    
+    // useEffect(() => {
+    //     getPopularMovies().then((obj) => {
+    //         console.log(obj.results);
+    //         if(obj.results) setPopMovie(obj.results)
+    //     });
+    // }, []);
+    // console.log(popMovie)
     return (
-        <div>
-            {popMovie.length > 0 && <Movie popMovie={popMovie} />}
-        </div>
+        <>
+            {popMovie.length > 0 && <Carousel popMovie={popMovie} />}
+            {popMovie.length > 0 && <Movies popMovie={popMovie} />}
+
+        </>
     )
 }
 
