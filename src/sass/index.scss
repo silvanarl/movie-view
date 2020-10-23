@@ -1,17 +1,17 @@
-*{
-    background-color:#120346;
-    color: white;
-}
-
 @import 'variables';
 @import 'mixin';
 @import 'movies';
 @import "react-alice-carousel/lib/scss/alice-carousel.scss";
 @import 'header.scss';
 @import 'movie';
+@import 'search';
+@import 'carousel';
+@import 'footer';
 
-.sliderimg{
-    width: 90%;
-    height: 500px;
-    object-fit: cover
+.w100{
+    width: 100%;
+}
+.general-bgc-col{
+    background-color:#120346;
+    color: white;
 }

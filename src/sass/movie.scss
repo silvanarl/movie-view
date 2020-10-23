@@ -5,4 +5,61 @@
     @include flexDirection(flex, row);
     flex-wrap: wrap;
     justify-content: space-around;
+    margin: 2.5rem;
+    margin-bottom: 0;
+}
+.info-actor{
+    @include measures(15rem, 20rem);
+    @include flexDirection(flex, column);
+    justify-content: center;
+    text-align: center;
+    margin: 8px;
+}
+.container-actor-image{
+    border-radius: 0.5rem;
+    @include measures(90%, 90%);
+    align-self: center;
+}
+.container-info{
+    @include flexDirection(flex, column);
+    margin: 3rem;
+}
+.container-image{
+    height: 35rem;
+    width: 100%;
+}
+.container-back{
+    width: 100%;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    background-color: #e1f7e1;
+    span{
+        padding-left: 5px;
+        color: #2b2a2a;
+        font-size: large;
+    }
+}
+.link-back{
+    text-decoration: none;
+    color: #120346;
+    padding-left: 1rem;
+    font-size: x-large;
+    font-weight: 600;
+}
+.container-actor-name{
+    background-color: #e1f7e1;
+    color: rgb(36, 36, 36);
+    @include flexDirection(flex, column);
+    align-self: center;
+    border-radius: 15px;
+    width: 90%;
+    .actor-name{
+        font-weight: 500;
+        font-size: medium;
+    }
+    .actor-character{
+        font-size: small;
+        font-weight: 500;
+    }
 }
