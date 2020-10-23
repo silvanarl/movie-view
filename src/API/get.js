@@ -1,7 +1,5 @@
 import {
-  SEARCH_BASE_URL,
   POPULAR_BASE_URL,
-  // ALL_BASE_URL,
   API_KEY,
   API_URL
 } from "../config";
