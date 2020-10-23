@@ -1,5 +1,4 @@
 import React from 'react';
-import Movie from '../views/Movie';
 import { Link } from 'react-router-dom';
 import {
     IMAGE_BASE_URL,
@@ -9,7 +8,7 @@ import {
 const Movies = ({popMovie}) => {
     return (
         <div className="main-container-movies">
-            <h2>Popular Movies</h2>
+            <h1 className="w100">Popular Movies</h1>
             {/* Preguntar si popMovie no es undefined, si es true el op && incluye el map siguiente */}
             {popMovie !== undefined && popMovie.map((obj) => (
                 <div key={obj.id} className="container-movie">
