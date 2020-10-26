@@ -1,13 +1,17 @@
 
 .carousel-title{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-size: xx-large;
+    width: 80%;
+    font-size: xxx-large;
+    position: absolute;
+    z-index: 1;
+    left: 15px;
+    font-weight: bold;
+    bottom: 70px;
+    text-shadow: 2px 2px 4px #000000;
 }
 .slidering{
     width: 100%;
-    height: 500px;
+    height: 600px;
     object-fit: cover;
     justify-self: center;
 }

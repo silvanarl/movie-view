@@ -14,3 +14,9 @@ export const getCredits = async (id) => {
     const response = await fetch(creditsEndpoint)
     return await response.json()
 };
+
+export const getMore = async () => {
+  const popularEndpoint = `${POPULAR_BASE_URL}&page=3`;
+  const response = await fetch(popularEndpoint)
+    return await response.json()
+}

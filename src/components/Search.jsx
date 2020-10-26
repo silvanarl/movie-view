@@ -2,14 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import loupe from '../assets/loupe.svg';
 
-const Search = ({ initialPopMovie, setPopMovie }) => {
+const Search = ({ 
+    setPopMovie,
+    initialPopMovie, 
+}) => {
     const searchMovie = (array, string) => {
         let result = [];
         for (let index = 0; index < array.length; index++) {
             const element = array[index];
             if(element.title.toLowerCase().startsWith(string)){
                 result.push(element)
-            } 
+            }
         }
         return result;
     };
