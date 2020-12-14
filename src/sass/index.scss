@@ -8,10 +8,19 @@
 @import 'carousel';
 @import 'footer';
 
+
 .w100{
     width: 100%;
 }
 .general-bgc-col{
-    background-color:#120346;
+    background-color:#1f193136;
+    // background-image: url('../assets/bkg-movie.jpg');
+    // width: 100vw;
+    // height: 100vh;
     color: white;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+}
+.flex{
+    display: flex;
 }
