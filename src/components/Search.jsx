@@ -1,38 +1,41 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from 'react';
+import PropTypes from "prop-types";
 import loupe from '../assets/loupe.svg';
+import { searchMovies} from '../API/get';
 
-const Search = ({ 
-    setPopMovie,
-    initialPopMovie, 
-}) => {
-    const searchMovie = (array, string) => {
-        let result = [];
-        for (let index = 0; index < array.length; index++) {
-            const element = array[index];
-            if(element.title.toLowerCase().startsWith(string)){
-                result.push(element)
-            }
+const Search = ({ setPopMovie}) => {
+
+    const [searchTerm, setSearchTerm] = useState('');
+
+    const handleOnChange = (e) => {
+        setSearchTerm(e.target.value)
+    };
+
+    const handleOnSubmit = (e) => {
+        e.preventDefault();
+        if(searchTerm){
+            searchMovies(searchTerm).then((data) => setPopMovie(data.results));  
+            setSearchTerm('');
         }
-        return result;
     };
-    const inputSearch = (event) => {
-        setPopMovie(searchMovie(initialPopMovie, event.target.value));
-    };
-    Search.propTypes = {
-        initialPopMovie: PropTypes.arrayOf(PropTypes.object).isRequired,
+
+
+    Search.propTypes = {    
         setPopMovie: PropTypes.func.isRequired,
     }
     return (
         <div className="bg-input-search">
-            <div className="container-input-search">
+            <form className="container-input-search" action="" onSubmit={handleOnSubmit}>
                 <img className="icon-search" src={loupe} alt=""/>
                 <input 
                     type="text" 
-                    onChange={inputSearch}
+                    onChange={handleOnChange}
                     className="input-search"
+                    value={searchTerm}
+                    placeholder="Search..."
                 />
-            </div>
+
+            </form>
         </div>
     )
 };
