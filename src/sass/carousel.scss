@@ -15,3 +15,32 @@
     object-fit: cover;
     justify-self: center;
 }
+.alice-carousel__dots{
+    display: none;
+}
+.alice-carousel__next-btn-wrapper, .alice-carousel__prev-btn-wrapper{ 
+    position: absolute;
+    z-index: 1;
+    top: 40%;
+    font-size: xxx-large;
+    font-weight: bold;
+}
+.alice-carousel__prev-btn-wrapper{
+    left: .5rem;
+}
+.alice-carousel__next-btn-wrapper{
+    right: .5rem;
+}
+.alice-carousel__next-btn, .alice-carousel__prev-btn{
+    font-family: 'Nanum Myeongjo', serif;
+    span{
+        font-size: xxx-large;
+        font-weight: 800;
+        color:rgba(172, 172, 172, 0.568);
+
+    }
+}
+.alice-carousel__next-btn-wrapper:hover, .alice-carousel__prev-btn:hover{
+    text-shadow: 4px .5rem .5rem #292828, 0 -4px .5rem #adacac, -4px -4px .5rem #adacac ;
+
+}
