@@ -12,7 +12,7 @@ const Movie = ({ popMovie }) => {
   const [credits, setCredits] = useState([]);
   const thisMovie = movies.find((movie) => parseInt(id) === movie.id);
 
-  useEffect(() => {
+  useEffect((id) => {
     getCredits(id).then((arr) => setCredits(arr));
   }, []);
 
