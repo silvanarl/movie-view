@@ -20,7 +20,7 @@ const Movies = ({popMovie}) => {
                         </Link>
                         <div className="container-movie-info">
                             <h3>{obj.title}</h3>
-                            <p>⭐{obj.vote_average}</p>
+                            <p><span role="img" aria-labelledby=":star:">⭐</span>{obj.vote_average}</p>
                         </div>
                     </div>
                 </div>
