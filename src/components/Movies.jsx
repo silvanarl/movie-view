@@ -14,7 +14,6 @@ const Movies = ({popMovie}) => {
             {popMovie !== undefined && popMovie.map((obj) => (
                 <div key={obj.id} className="flex">
                     <div className="container-movie hvr-grow-rotate">
-                        {console.log(obj)}
                         <Link to={`/${obj.id}`}>
                             <img className="container-movie-image" src={`${IMAGE_BASE_URL}${SMALL_POSTER_SIZE}${obj.poster_path}`} alt={obj.title}/>
                         </Link>
